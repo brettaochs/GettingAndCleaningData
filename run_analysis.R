@@ -40,7 +40,12 @@ all_data_df <- rbind(train_df, test_df)
 ## Extract mean and standard deviation measurements
 ## Wasn't sure whether to include columns of meanFreq
 means_std_df <- all_data_df[, grepl("mean()|std()|Subjects|Activity|!angle|!meanFreq", 
-                                      names(all_data_df))]
+                                    names(all_data_df))]
+all_data_df2 <- tbl_df(all_data_df)
+all_data_df2 <- all_data_df2 %>%
+    select(contains("mean()|std()|Subjects|Activity")) %>% 
+    select(-(contains("angle|meanFreq()")))
+    
 ################################################################################
 ## Step 3: 
 ## Name activities in data set with descriptive activity names
@@ -58,7 +63,7 @@ names(means_std_df) <- gsub("[()-]", "", names(means_std_df))
 means_std_df <- tbl_df(means_std_df)
 
 tidier_data <- means_std_df %>%
-    mutate(-ActivityID)%>%
+    ##mutate(-ActivityID)%>%
     group_by(Activity, Subjects)%>%
     summarize(Mean = mean(tBodyAccStandardDeviationZ))
     ## summarise_each(funs(mean), -Subjects)
