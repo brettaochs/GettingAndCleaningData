@@ -64,6 +64,6 @@ tidier_data <- means_std_df %>%
     group_by(Activity, Subjects)%>%
     summarise_each(funs(mean))
 
-print(tidier_dataset)
-write.table()
+## Write datatset to .txt file for upload to complete assignment
+write.table(tidier_data, file = "TidyData.txt", row.names = F, col.names = TRUE)
 ################################################################################
