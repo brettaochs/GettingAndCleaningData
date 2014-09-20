@@ -38,7 +38,7 @@ all_data_df <- rbind(train_df, test_df)
 ################################################################################
 ## Step 2: 
 ## Extract mean and standard deviation measurements
-## Wasn't sure whether to include columns of meanFreq so removed those and angle columns
+## Removed meanFreq and angle columns
 all_data_df <- tbl_df(all_data_df)
 means_std_df <- all_data_df %>%
     select(contains("mean()|std()|Subjects|Activity")) %>% 
@@ -55,20 +55,15 @@ means_std_df$Activity <- activity_labels[means_std_df$Activity, 2]
 names(means_std_df) <- gsub("-mean", "Mean", names(means_std_df))
 names(means_std_df) <- gsub("-std", "StandardDeviation", names(means_std_df))
 names(means_std_df) <- gsub("[()-]", "", names(means_std_df))
+
 ################################################################################
 ## Step 5: 
 ## Create secondary independent tidy data set with variable averages for each
 ## activity and subject
-means_std_df <- tbl_df(means_std_df)
-
 tidier_data <- means_std_df %>%
     group_by(Activity, Subjects)%>%
-    summarize_each(funs(mean))
+    summarise_each(funs(mean))
 
-
-tidier_dataset <- aggregate(means_std_df[, 3:ncol(means_std_df)], 
-                            list(Subjects = means_std_df$Subjects,
-                                 Activity = means_std_df$Activity), mean, na.RM = TRUE)
 print(tidier_dataset)
 write.table()
 ################################################################################
