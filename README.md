@@ -1,6 +1,4 @@
-## This R script will create tiny dataset from merged test and training sets
-## compiled from the UCI HAR Dataset as required for Coursera course Getting 
-## and Cleaning Data course project assignment.
+## This R script will create tiny dataset from merged test and training sets compiled from the UCI HAR Dataset as required for Coursera course Getting and Cleaning Data course project assignment.
 ################################################################################
 ## Must load dplyr package to complete .R code
 ## Load datasets from files located in current working directory within UCI HAR
