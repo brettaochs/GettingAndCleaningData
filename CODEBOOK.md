@@ -84,3 +84,5 @@ For more information about manipulations within this dataset contact: brett.a.oc
 64      fBodyBodyGyroMag-std()|     fBodyBodyGyroMagStandardDeviation
 65 fBodyBodyGyroJerkMag-mean()|              fBodyBodyGyroJerkMagMean
 66  fBodyBodyGyroJerkMag-std()| fBodyBodyGyroJerkMagStandardDeviation
+
+### This Codebook predominantly gives naming convention of new variables kept in Tidy Dataset to fulfill assignment. For more detail about particular variables please see UCI HAR datasets and documentation.
