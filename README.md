@@ -3,9 +3,9 @@
 * Must load dplyr package to complete .R code
   * dplyr package used to later manipulate data frames and summarize to create tidy dataset
 * Load datasets from files located in current working directory within UCI HAR
-  * Dataset folder:
-  * Load training datasets
-  * Load testing datasets
+  * Dataset folder: "UCI HAR Dataset" folder must be in working directory
+    * Load training datasets files loaded from "train" folder
+    * Load testing datasets files loaded from "test" folder
 ####################################
 ## Course Project Steps Followed: ##
 ####################################
