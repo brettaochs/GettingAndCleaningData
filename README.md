@@ -1,11 +1,11 @@
 ## This run_analysis.R script will create tiny dataset from merged test and training sets compiled from the UCI HAR Dataset as required for Coursera Getting and Cleaning Data course project.
 ################################################################################
-*Must load dplyr package to complete .R code
-  *dplyr package used to later manipulate data frames and summarize to create tidy dataset
-*Load datasets from files located in current working directory within UCI HAR
-  *Dataset folder:
-  *Load training datasets
-  *Load testing datasets
+* Must load dplyr package to complete .R code
+  * dplyr package used to later manipulate data frames and summarize to create tidy dataset
+* Load datasets from files located in current working directory within UCI HAR
+  * Dataset folder:
+  * Load training datasets
+  * Load testing datasets
 ####################################
 ## Course Project Steps Followed: ##
 ####################################
