@@ -12,7 +12,8 @@
 ################################################################################
 
 ### Step 1: Merge training and test data sets to create two data frames and then combine into on dataframe for rest of project use
-### Step 2: Extract mean and standard deviation measurements I removed meanFreq and angle columns
+### Step 2: Extract mean and standard deviation measurements 
+#### * I removed meanFreq and angle columns and only kept mean() and std() columns for assignment
 ### Step 3: Name activities in data set with descriptive activity names
 ### Step 4: Label the data set with descriptive variable names
 ### Step 5: Create secondary independent tidy data set of means for each activity and subject
